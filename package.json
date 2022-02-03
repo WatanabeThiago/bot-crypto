@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.25.0",
-    "telegraf": "^4.6.0"
+    "dotenv": "^15.0.0",
+    "telegraf": "^4.6.0",
+    "venom-bot": "^4.0.5"
   }
 }

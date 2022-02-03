@@ -24,7 +24,7 @@ function calcRSI(closes, isBuy) {
 
   const closesLenght = chooseClosesLenght(closes, isBuy);
 
-  for (let i = closes.length - 15; i < closesLenght; i++) {
+  for (let i = closes.length - 4; i < closesLenght; i++) {
     const difference = closes[i] - closes[i - 1];
     if (difference >= 0) {
       high += difference;
@@ -43,7 +43,7 @@ async function bot() {
   const axios = require("axios");
 
   const response = await axios.get(
-    "https://api.binance.com/api/v3/klines?symbol=ETHBUSD&interval=1m"
+    "https://api.binance.com/api/v3/klines?symbol=BTCBUSD&interval=1m"
   );
   const candle = response.data[499];
   const price = parseFloat(candle[4]);
